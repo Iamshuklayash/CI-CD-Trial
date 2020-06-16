@@ -33,7 +33,7 @@ jobs:
         echo test, and deploy your project.
 
     - name: trying to open man pages
-      run: man
+      run: man ls
       
    
     
