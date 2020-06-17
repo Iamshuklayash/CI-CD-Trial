@@ -21,4 +21,10 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn clean package
+    - name: creating docker image
+      run: docker build -t demoimage
+    - name: running the docker container
+      run: docker run demoimage 
+      
+      
