@@ -24,7 +24,5 @@ jobs:
       run: mvn clean package
     - name: creating docker image
       run: docker build -t demoimage .
-    - name: running the docker container
-      run: docker run demoimage 
-      
+  
       
