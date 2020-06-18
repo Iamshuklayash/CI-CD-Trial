@@ -27,7 +27,7 @@ jobs:
     - name: login to azure
       run:  az acr login --name wmtacr -p yUnhOmvkGnVl6kXe3ryfJ5KKJO/Hfxao -u wmtacr
     - name: tag the docker image
-      run:  docker tag demoimage wmtacr.azurecr.io/samples/demoi
+      run:  docker tag demoimage wmtacr.azurecr.io/samples/demoimage
     - name: push the docker image to ACR
       run:  docker push wmtacr.azurecr.io/samples/demoimage
 
