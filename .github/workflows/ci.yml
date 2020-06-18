@@ -24,5 +24,11 @@ jobs:
       run: mvn clean package
     - name: creating docker image
       run: docker build -t demoimage .
-  
+    - name: login to azure
+      run: az acr login --name wmtacr
+    - name: tag the docker image
+      run: ls
+
+
+    
       
