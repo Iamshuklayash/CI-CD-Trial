@@ -21,13 +21,15 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn clean package
+      run:  mvn clean package
     - name: creating docker image
-      run: docker build -t demoimage .
+      run:  docker build -t demoimage .
     - name: login to azure
-      run: az acr login --name wmtacr
+      run:  az acr login --name wmtacr -p yUnhOmvkGnVl6kXe3ryfJ5KKJO/Hfxao -u wmtacr
     - name: tag the docker image
-      run: ls
+      run:  docker tag demoimage wmtacr.azurecr.io/samples/demoi
+    - name: push the docker image to ACR
+      run:  docker push wmtacr.azurecr.io/samples/demoimage
 
 
     
